@@ -130,7 +130,7 @@ void find_path(int s, int v)
 
 void create_graph()
 {
-    int i,max_edges,origin,destin;
+    int i,max_edges,origin,destin, wt;
 
     printf("\nEnter number of vertices : ");
     scanf("%d",&n);
@@ -143,12 +143,14 @@ void create_graph()
         scanf("%d %d",&origin,&destin);
         if( (origin == -1) && (destin == -1) )
             break;
+        printf("enter the weight for this edge: ");
+        scanf("%d", &wt);
         if( origin >= n || destin >= n || origin<0 || destin<0)
         {
             printf("\nInvalid edge!\n");
             i--;
         }
         else
-            adj[origin][destin] = 1;
-    }/*End of for*/
+            adj[origin][destin] = wt;
+    }
 }
