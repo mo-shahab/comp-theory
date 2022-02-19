@@ -1,18 +1,18 @@
-a)French b)Latin c)Hindi d)Arabic
-a)Linus Torvalds b)George Clooney c)Mark Zuckerberk d)Charles Babbage
-a)machine language b)Tatooinic language c)Lannister's language d)Khaleesi
-a)Hash b)Passwords c)Taboo d)VTUA extensions
-a)Printers b)Monitors c)Air conditioners d)Executors
-a)Arduino b)CPUs c)cars d)Modem
-a)Second Generation computer b) First Generation Computer c) Third Generation Computer d)Future Proof
-a)Man In Chrome Religion b)Main Interpreted Circular React c)Magnetic Ink Character Reader d)Modem Incinerator Clamped Reactor
-a)Routing page b)Indexpage c)Homepage d)Terminal page
-a)True b)False
-a)Discrete Memory Appendage b)Direct Memory Access c)Domain Malfunction Activator d)Door Maintainence Agent
-a)Forced Transcription b)Forgery Transcription c)Forbidden Translation d)Formula Translation 
-a)LMR b)OCR c)CAR d)TCP
-a)Bill Gates b)Dennis Ritchie c)Larry Page d)Eren Yaeger
-a)Interpreter b)Incultivator c)Incinerator d)Innovator
-a)Disk Operating System b)Domain Oblivious Sorcery c)Dead Orator's Secret d)Drainage Operating Systems
-a)Simple Multi Port Switch b)Special Mono Port Switch c)Switched mode Power Supply d)Switching Motor Predecessor Solos
-a)chilling room b)waiting room c)special room d)gaming room
+1)French 2)Latin 3)Hindi 4)Arabic
+1)Linus Torvalds 2)George Clooney 3)Mark Zuckerberg 4)Charles Babbage
+1)machine language 2)Tatooinic language 3)Lannister's language 4)Khaleesi
+1)Hash 2)Passwords 3)Taboo 4)VTUA extensions
+1)Printers 2)Monitors 3)Air conditioners 4)Executors
+1)Arduino 2)CPUs 3)cars 4)Modem
+1)Second Generation computer 2) First Generation Computer 3) Third Generation Computer 4)Future Proof
+1)Man In Chrome Religion 2)Main Interpreted Circular React 3)Magnetic Ink Character Reader 4)Modem Incinerator Clamped Reactor
+1)Routing page 2)Indexpage 3)Homepage 4)Terminal page
+1)True 2)False
+1)Discrete Memory Appendage 2)Direct Memory Access 3)Domain Malfunction Activator 4)Door Maintainence Agent
+1)Forced Transcription 2)Forgery Transcription 3)Forbidden Translation 4)Formula Translation 
+1)LMR 2)OCR 3)CAR 4)TCP
+1)Bill Gates 2)Dennis Ritchie 3)Larry Page 4)Eren Yaeger
+1)Interpreter 2)Incultivator 3)Incinerator 4)Innovator
+1)Disk Operating System 2)Domain Oblivious Sorcery 3)Dead Orator's Secret 4)Drainage Operating Systems
+1)Simple Multi Port Switch 2)Special Mono Port Switch 3)Switched mode Power Supply 4)Switching Motor Predecessor Solos
+1)chilling room 2)waiting room 3)special room 4)gaming room
