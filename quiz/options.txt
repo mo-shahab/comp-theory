@@ -16,3 +16,57 @@
 1)Disk Operating System 2)Domain Oblivious Sorcery 3)Dead Orator's Secret 4)Drainage Operating Systems
 1)Simple Multi Port Switch 2)Special Mono Port Switch 3)Switched mode Power Supply 4)Switching Motor Predecessor Solos
 1)chilling room 2)waiting room 3)special room 4)gaming room
+1)Erlang 2)node.js 3)Django 4)BASIC
+1)Binary code 2)Hex Code 3)ASCII 4)EBDIC
+1)PERL 2)Haskell 3)Anaconda 4)Whitespace
+1)Shakespeare 2)Chicken 3)Velato 4)PEMDAS
+1)The Kenbak-1 2)Intel epyc 3)Macintosh 4)Dell inspiron
+1)Processor 2)Fan 3)SSD 4)Video card
+1)Video card 2)Sound card 3)Processor 4)AIO cooler
+1)pseudocode 2)iteration 3)sequence 4)selection
+1)comparison errors 2)control logic errors 3)single errors 4)arithmetic errors
+1)BEGIN; WHILE car is travelling;keep seat belt on; ENDWHILE; END 2)BEGIN; set number to user input; IF number is negative THEN print _negative no square root_; END 3)BEGIN; set end to 5; FOR counter goes from 1 to end; print counter; NEXT counter; END 4)BEGIN; REPEAT water plants UNTIL ground is soaked; END
+1)PERL 2)Ada 3)ALGOL 4)BNF
+1)Computer Graphic Interface 2)Common Graphic Interface 3)Common Gateway Interface 4)Computer Generated Information
+1)SQL injection 2)Social Engineering 3)XSS scripting 4)DDoS
+1)Worm 2)Virus 3)A Trojan horse 4)VTUA injection
+1)YES 2)NO
+1)Spyware 2)Ransomeware 3)Houseware 4)Malware
+1)Firmware 2)Malware 3)Components 4)Spyware
+1)A source code 2)An Assembler Program 3)A PHP script 4)Morse Code
+1)Computer Process 2)A Computer Pip 3)A Computer Network 4)None of the above
+1)A Central Processor Unit 2)Power Supply Unit 3)RAM 4)A Graphics Processing Unit
+1)A Peripheral Device 2)An Auxillary device 3)A main device 4)A Concurrent Modulators
+1)Compiled Language 2)Scripting Language 3)Modified Language 4)Polish Language
+1)An environment 2)An .env File 3)A Runtime System 4)A Virtual Environment
+1)Bill Gates 2)Brad Pitt 3)Ryan Dahl 4)Grace Hopper
+1)A Control Store 2)An Accumulator 3)A Register 4)Memory
+1)Exposure 2)The Internet 3)A Waste of Time 4)The Ethernet
+1)HTML 2)C++ 3)CSS 4)node.js
+1)Microcontroller 2)Microconnector 3)Microphone 4)Microsequencer
+1)Internet Protocol 2)Insider Pavement 3)Incremented Protocol 4)Internet Pammy
+1)Digital Subsequential Logic 2)Digital Subscriber Line 3)Digital Sampling Ladder 4)Digital Solicited Landmark
+1)Worlds First Program 2)Zuckerberg Who 3)Manchester Baby 4)Million Dollar Program
+1)Romeo Juliet 2)The Man In The Iron Mask 3)Karl Marx 4)The Yong Mans Gleanings
+1)Ethernet 2)Internet 3)Holy Switch 4)Hub
+1)Susan Wojcicki 2)Tim Berners-Lee 3)It was just there 4)Elliot Alderson
+1)C# 2)Perl 3)Swift 4)Temple-OS
+1)God PC 2)RGB Dominator 3)The Crysis Runner 4)The Turing Machine
+1)Voice Over Internet Protocol 2)Voice Over Internet Pammy 3)Vice On Internal Prada
+1)The Intel XOR 2)The Intel 4004 3)The Macintosh Dasher 4)The AMD Threadripper
+1)A Virtual Machine 2)A Web Browser 3)A Web Server 4)RAID Server
+1)Deep Learning 2)Mocha code 3)Ethical Hacking 4)Machine Learning
+1)The Apple ProFile 2)The Macintosh 3)The Apple ProLific 4)The Apple M1
+1)System on a Chrome 2)System on a Chip 3)Student on active Crack 4)Solo on activision Camera
+1)A Workstation 2)A Prada Rack 3)A Server 4)A Gaming Rig
+1)The IBM 4004 2)The Macintosh 3)The Windows 0.1 4)The IBM 5100
+1)Microsoft 2)Apple 3)Jordans 1 4)Seriously will anyone read this
+1)Zettabyte 2)Yottabyte 3)Pentabyte 4)Terrabyte
+1)Mozarella and Gorilla 2)Mozart and Garmella 3)Mosaic and Godzilla 4)Motor And Nineangella
+1)An Export 2)An Extractor 3)A Virus 4)An Exploit
+1)The Apple-1 2)The Apple-0 3)The Apple-Proto 4)The Zeus
+1)The Markasus 2)The Pegasus 3)The Perciasus 4)Elsa
+1)Latency 2)Markup 3)Bandwidth 4)Logger
+1)Starbucks 2)Latte 3)A Venti 4)Mocha
+1)A Cache 2)Random Access Memory 3)Read Only Memory 4)Register
+1)Open Source 2)Application Software 3)A Portfolio 4)The documentation
