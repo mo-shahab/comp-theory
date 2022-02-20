@@ -16,3 +16,57 @@ A computer program that translates one program instructions at a time into machi
 DOS stands for? 
 SMPS stands for?
 RAM can be treated as the ____ for the computer processor?
+WhatsApp concurrent model is implemented using _____ programming language.
+Which of the following is not a type of computer code related to Program Execution?
+Which of the following is not a programming language?
+Which of the following is not a computer language?
+What of the following is the oldest personal computer?
+Now you need something to reduce the heat produced by the main components. What would you use in an ordinary desktop computer?
+You want your computer not only to function, but also to present the results in a visual form. What device do you need to send out visual information to a display?
+Algorithms are composed of control structures. Which of these is not a control structure?
+Which of these is not a type of error that can occur within modules?
+Which one of these is an example of an unguarded loop?
+Which of these is not a programming language?
+Which of these can CGI stand for?
+Which of the following types of attacks do hackers use to gain information from you without the use of specialized computer programs?
+Which of the following software programs' main function is typically to enable an attacker to have a complete control of their victim's PC?
+Is encryption of your data an unnecessary security precaution that can be ignored?
+Computer worms, viruses, as well as Trojans are generally grouped into one big group. What is this group called?
+What is the specific class of computer software that provides the low-level control for a device’s specific hardware called?
+What kind of program creates object code by translating combinations of mnemonics and syntax for operations and addressing modes into their numerical equivalents?
+What is the name of a group of computers that use a set of common communication protocols over digital interconnects to share resources located on network nodes?
+What is the specialized electronic circuit that is designed to rapidly manipulate and alter memory to accelerate the creation of images in a frame buffer for the output on a display device called?
+What is an auxiliary device or hardware component, that is attached to a computer, and is used to put information into and get information out of, but is not part of the core components called?
+What is a programming language for special run-time environments that automatically executes certain tasks called?
+What primarily implements portions of an execution model?
+Who was the first person to develop a compiler for programming language?
+What is the part of a CPU’s control unit, that stores the CPU’s microprogram?
+What is the global system of interconnected computer networks that uses TCP/IP to communicate between networks and devices called?
+What is the style sheet language used for describing the presentation of a document written in a markup language such as HTML called?
+What generates the addresses used to step through the microprogram of a control store and is used as a part of the control unit of a CPU?
+What does “IP” stand for?
+What does “DSL” stand for in regards to the internet?
+What was the world’s first stored-program computer called?
+In which 1613 book, was the first use of the term “computer” used, according to the Oxford English Dictionary?
+What is a family of wired computer networking technologies commonly used in local area networks, metropolitan area networks, and wide area networks called?
+Who developed the first web browser?
+What is the name of Apple’s general-purpose programming language, that was developed as a replacement language for Objective-C?
+What machine is credited as being the first computer, invented in 1936?
+What does “VoIP” stand for?
+What is widely accepted as the first single chip microprocessor?
+What is the system of one or more computers or server software, dedicated to running this software, that can satisfy client HTTP requests on the public World Wide Web called?
+What is the study of computer algorithms that improve automatically through experience, and are a part of artificial intelligence called?
+What was Apple’s first hard drive called?
+What does “SoCs” stand for in regards to computers?
+What is a piece of computer hardware or software, that provides functionality for other programs or devices, called?
+What was the first commercially available portable computer?
+What company developed C# as part of its .NET initiative?
+1000 zettabytes is equal to 1 what?
+What two words does the free software community “Mozilla” derive its name from?
+What is a piece of software, a chunk of data, or a sequence of commands that takes advantage of a bug or vulnerability to cause unintended or unanticipated behavior to occur on computer software, hardware, or something electronic called?
+What was Apple’s first pre-assembled computer called?
+What mythological greek creature did the name “Asus” come from?
+What is the maximum rate of data transfer across a given path in computing called?
+What was Javascript originally called?
+What is the hardware or software component that stores data so that future requests for that data can be served faster called?
+What type of software is a program or group of programs designed for end-users?
