@@ -82,7 +82,7 @@ int main(void)
     // segfault for more declarations of the struct type
 
     printf("--------------------------QUIZ--------------------------\n");
-    printf("=>This quiz contains the trivial questions based on Computer Science\n");
+    printf("=>This quiz contains the trivial questions based on Pop Culture\n");
     printf("=>Rules for the game are as given below.\n");
     printf("=>Make sure you read them before you start\n");
     printf("----------------------------------------------------------");
