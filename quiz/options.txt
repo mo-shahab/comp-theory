@@ -1,72 +1,45 @@
-1)French 2)Latin 3)Hindi 4)Arabic
-1)Linus Torvalds 2)George Clooney 3)Mark Zuckerberg 4)Charles Babbage
-1)machine language 2)Tatooinic language 3)Lannister's language 4)Khaleesi
-1)Hash 2)Passwords 3)Taboo 4)VTUA extensions
-1)Printers 2)Monitors 3)Air conditioners 4)Executors
-1)Arduino 2)CPUs 3)cars 4)Modem
-1)Second Generation computer 2) First Generation Computer 3) Third Generation Computer 4)Future Proof
-1)Man In Chrome Religion 2)Main Interpreted Circular React 3)Magnetic Ink Character Reader 4)Modem Incinerator Clamped Reactor
-1)Routing page 2)Indexpage 3)Homepage 4)Terminal page
-1)True 2)False
-1)Discrete Memory Appendage 2)Direct Memory Access 3)Domain Malfunction Activator 4)Door Maintainence Agent
-1)Forced Transcription 2)Forgery Transcription 3)Forbidden Translation 4)Formula Translation 
-1)LMR 2)OCR 3)CAR 4)TCP
-1)Bill Gates 2)Dennis Ritchie 3)Larry Page 4)Eren Yaeger
-1)Interpreter 2)Incultivator 3)Incinerator 4)Innovator
-1)Disk Operating System 2)Domain Oblivious Sorcery 3)Dead Orator's Secret 4)Drainage Operating Systems
-1)Simple Multi Port Switch 2)Special Mono Port Switch 3)Switched mode Power Supply 4)Switching Motor Predecessor Solos
-1)chilling room 2)waiting room 3)special room 4)gaming room
-1)Erlang 2)node.js 3)Django 4)BASIC
-1)Binary code 2)Hex Code 3)ASCII 4)EBDIC
-1)PERL 2)Haskell 3)Anaconda 4)Whitespace
-1)Shakespeare 2)Chicken 3)Velato 4)PEMDAS
-1)The Kenbak-1 2)Intel epyc 3)Macintosh 4)Dell inspiron
-1)Processor 2)Fan 3)SSD 4)Video card
-1)Video card 2)Sound card 3)Processor 4)AIO cooler
-1)pseudocode 2)iteration 3)sequence 4)selection
-1)comparison errors 2)control logic errors 3)single errors 4)arithmetic errors
-1)BEGIN; WHILE car is travelling;keep seat belt on; ENDWHILE; END 2)BEGIN; set number to user input; IF number is negative THEN print _negative no square root_; END 3)BEGIN; set end to 5; FOR counter goes from 1 to end; print counter; NEXT counter; END 4)BEGIN; REPEAT water plants UNTIL ground is soaked; END
-1)PERL 2)Ada 3)ALGOL 4)BNF
-1)Computer Graphic Interface 2)Common Graphic Interface 3)Common Gateway Interface 4)Computer Generated Information
-1)SQL injection 2)Social Engineering 3)XSS scripting 4)DDoS
-1)Worm 2)Virus 3)A Trojan horse 4)VTUA injection
-1)YES 2)NO
-1)Spyware 2)Ransomeware 3)Houseware 4)Malware
-1)Firmware 2)Malware 3)Components 4)Spyware
-1)A source code 2)An Assembler Program 3)A PHP script 4)Morse Code
-1)Computer Process 2)A Computer Pip 3)A Computer Network 4)None of the above
-1)A Central Processor Unit 2)Power Supply Unit 3)RAM 4)A Graphics Processing Unit
-1)A Peripheral Device 2)An Auxillary device 3)A main device 4)A Concurrent Modulators
-1)Compiled Language 2)Scripting Language 3)Modified Language 4)Polish Language
-1)An environment 2)An .env File 3)A Runtime System 4)A Virtual Environment
-1)Bill Gates 2)Brad Pitt 3)Ryan Dahl 4)Grace Hopper
-1)A Control Store 2)An Accumulator 3)A Register 4)Memory
-1)Exposure 2)The Internet 3)A Waste of Time 4)The Ethernet
-1)HTML 2)C++ 3)CSS 4)node.js
-1)Microcontroller 2)Microconnector 3)Microphone 4)Microsequencer
-1)Internet Protocol 2)Insider Pavement 3)Incremented Protocol 4)Internet Pammy
-1)Digital Subsequential Logic 2)Digital Subscriber Line 3)Digital Sampling Ladder 4)Digital Solicited Landmark
-1)Worlds First Program 2)Zuckerberg Who 3)Manchester Baby 4)Million Dollar Program
-1)Romeo Juliet 2)The Man In The Iron Mask 3)Karl Marx 4)The Yong Mans Gleanings
-1)Ethernet 2)Internet 3)Holy Switch 4)Hub
-1)Susan Wojcicki 2)Tim Berners-Lee 3)It was just there 4)Elliot Alderson
-1)C# 2)Perl 3)Swift 4)Temple-OS
-1)God PC 2)RGB Dominator 3)The Crysis Runner 4)The Turing Machine
-1)Voice Over Internet Protocol 2)Voice Over Internet Pammy 3)Vice On Internal Prada
-1)The Intel XOR 2)The Intel 4004 3)The Macintosh Dasher 4)The AMD Threadripper
-1)A Virtual Machine 2)A Web Browser 3)A Web Server 4)RAID Server
-1)Deep Learning 2)Mocha code 3)Ethical Hacking 4)Machine Learning
-1)The Apple ProFile 2)The Macintosh 3)The Apple ProLific 4)The Apple M1
-1)System on a Chrome 2)System on a Chip 3)Student on active Crack 4)Solo on activision Camera
-1)A Workstation 2)A Prada Rack 3)A Server 4)A Gaming Rig
-1)The IBM 4004 2)The Macintosh 3)The Windows 0.1 4)The IBM 5100
-1)Microsoft 2)Apple 3)Jordans 1 4)Seriously will anyone read this
-1)Zettabyte 2)Yottabyte 3)Pentabyte 4)Terrabyte
-1)Mozarella and Gorilla 2)Mozart and Garmella 3)Mosaic and Godzilla 4)Motor And Nineangella
-1)An Export 2)An Extractor 3)A Virus 4)An Exploit
-1)The Apple-1 2)The Apple-0 3)The Apple-Proto 4)The Zeus
-1)The Markasus 2)The Pegasus 3)The Perciasus 4)Elsa
-1)Latency 2)Markup 3)Bandwidth 4)Logger
-1)Starbucks 2)Latte 3)A Venti 4)Mocha
-1)A Cache 2)Random Access Memory 3)Read Only Memory 4)Register
-1)Open Source 2)Application Software 3)A Portfolio 4)The documentation
+a)Starbucks Cup b)Tennis Racket c)Feminist twitter thread d)Rolex Watch 
+a)Stephen King b)Stephenie Meyer c)RR Martin d)Charles Barthelomeo George
+a)January 1 b)February 30 c)May 4 d)Its ok if you dont remember the date
+a)The Downside Up b)The leftside right c)The rightside left d)The Upside Down
+a)Kourtney b)Kim c)Kris d)Khloe
+a)2000 b)2007 c)2003 d)2010
+a)Freddie Silver b)Bruce Wayne c)Ringo Starr d)Some Dude
+a)Mahesh Tiwari b)Don Coreleono c)Carl Johnson d)Rahul Dravid
+a)8 b)7 c)What is Harry Potter d)Me no nerd
+a)5.5 Million b)6 Million c)A lot, the dude is a nerd d)what
+a)BTS b)SKZ c)Akatsuki d)The Sidemen 
+a)Five b)There were but idk the exact number c)ooh Thats a tough one d)5
+a)Mark Zuckerberg b)Sofia c)Chitti d)The one who cant aim in the FPS shooting games
+a)Christop Waltz b)Rami Malek c)He starred himself as himself cause he is a legend d)I dont know what you are talking about
+a)Jojo Rabbit b)The Irishmen c)Parasite d)Ford vs Ferrari
+a)11 b)12 c)9 d)10
+a)Harry Styles b)Liam c)Zayn d)Niall
+a)Oprah Winfrey b)Kylie Jenner c)The Queen of England d)Some women 
+a)Newton through Einstein b)The Batman c)Star Wars d)The Prodigal Nail Biter- The Story Unfolds
+a)The Cafe b)Le Cafe c)Das Cafe d)Central Perk 
+a)Wonder Woman b)Super Girl c)Bat Woman d)Feminist
+a)She hated him b)There was no enough room c)Jack just wanted to swim so she let him be d)No idea
+a)Grand Theft Auto Series b)Counter Strike c)Mario d)Halo
+a)The Japanese Dudes Revenge b)Black Lover c)Skyrim d)Super Mario World
+a)Aurora b)Cinderella c)Mulan d)The Mermaid
+a)Mulan b)The Lion King c)Acapella in the Nutella d)Dream on
+a)Lincoln b)The Terminal c)Schindler's List d)Ready Player One 
+a)The Return of the Jedi b)A New Hope c)The Revenge of the Sith d)Empire strikes back
+a)Persephone b)Barbie c)Ken d)Kim Kadarshian
+a)Take a scoop and do a hoop b)Scoops Ahoy c)Ooh kids love them ice creme d)Baskins Robins
+a)Sanjeev Kapoor b)Uncle Roger c)Gordon Ramsay d)Vinsmoke Sanji
+a)Harry Potter b)Luke Skywalker c)Percy Jackson d)Frodo Baggins
+a)Bruce Wayne b)Shh we dont know c)Batman who d)I am vengeance
+a)Lois Lane b)Kryptonite c)Mortgage loans d)Bulldog
+a)1 b)3 c)4 d)Popeye has nephews?
+a)20 b)18 c)12 d)16
+a)A Song of Ice and Fire b)There shall be blood c)Incest is not cool d)The Art Of War
+a)Ana De Armas b)All of them <3 c)Nico Robin d)Lexi from Euphoria
+a)Shah Rukh Khan b)Sophie Turner c)Maisie Williams d)Some woman
+a)Pilots b)The Hustler c)Attack On Titan(overrated, one piece good) d)Wings
+a)Donkey Kong b)King Kong c)Monkey King d)Sun Wukong
+a)Switch b)The GameCube c)Switch DS d)PSP
+a)PUBG b)FreeFire c)Skyrim d)Roblox
+a)They have messed up sleep Schedule b)They are cool c)They play video games d)Definitely mobile gaming does not come into mind
+a)Manchester UTD b)Juventus FC c)Bangalore FC d)Creators fantasy team 
