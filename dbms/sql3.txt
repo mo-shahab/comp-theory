@@ -1,0 +1,478 @@
+Enter password: ********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 4
+Server version: 5.7.37-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| giraffe            |
+| happy              |
+| mysql              |
+| performance_schema |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use happy;
+Database changed
+mysql> desc happy;
+ERROR 1146 (42S02): Table 'happy.happy' doesn't exist
+mysql> happy.employee;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'happy.employee' at line 1
+mysql> desc employee;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| e_id     | int(11)     | NO   | PRI | NULL    |       |
+| e_name   | varchar(20) | YES  |     | NULL    |       |
+| e_salary | int(11)     | YES  |     | NULL    |       |
+| e_age    | int(11)     | YES  |     | NULL    |       |
+| e_gender | varchar(20) | YES  |     | NULL    |       |
+| e_dept   | varchar(20) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+6 rows in set (0.06 sec)
+
+mysql> select * from employee;
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    1 | sam    |    95000 |    35 | male     | operation |
+|    2 | bob    |    80000 |    21 | male     | support   |
+|    3 | anne   |   125000 |    34 | female   | analytics |
+|    4 | julia  |   230000 |    23 | female   | analytics |
+|    5 | matt   |   120000 |    24 | male     | sales     |
+|    6 | jeff   |   200000 |    28 | male     | operation |
++------+--------+----------+-------+----------+-----------+
+6 rows in set (0.14 sec)
+
+mysql> select * form employee where e_dept = 'operation' and e_salary > 140000;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'form employee where e_dept = 'operation' and e_salary > 140000' at line 1
+mysql> select * from employee where e_dept = 'operation' and e_salary > 140000;
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    6 | jeff   |   200000 |    28 | male     | operation |
++------+--------+----------+-------+----------+-----------+
+1 row in set (0.00 sec)
+
+mysql> --hello
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--hello' at line 1
+mysql> select * from employee where e_dept = 'operation' or e_dept = 'analytics';
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    1 | sam    |    95000 |    35 | male     | operation |
+|    3 | anne   |   125000 |    34 | female   | analytics |
+|    4 | julia  |   230000 |    23 | female   | analytics |
+|    6 | jeff   |   200000 |    28 | male     | operation |
++------+--------+----------+-------+----------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> select * from employee where not e_gender = 'female';
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    1 | sam    |    95000 |    35 | male     | operation |
+|    2 | bob    |    80000 |    21 | male     | support   |
+|    5 | matt   |   120000 |    24 | male     | sales     |
+|    6 | jeff   |   200000 |    28 | male     | operation |
++------+--------+----------+-------+----------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> select * from employee where not e_gender <30;
+Empty set, 6 warnings (0.00 sec)
+
+mysql> select * from employee where not e_age < 30;
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    1 | sam    |    95000 |    35 | male     | operation |
+|    3 | anne   |   125000 |    34 | female   | analytics |
++------+--------+----------+-------+----------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> SO THIS IS LIKE OPERATOR, TWO WILD CARD CHARACTERS ARE BEING USED AND STUFF % AND _ ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SO THIS IS LIKE OPERATOR, TWO WILD CARD CHARACTERS ARE BEING USED AND STUFF % AN' at line 1
+mysql> select * from employee where e_name like 'j%';
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    4 | julia  |   230000 |    23 | female   | analytics |
+|    6 | jeff   |   200000 |    28 | male     | operation |
++------+--------+----------+-------+----------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> select * from employee where e_age like '3_';
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    1 | sam    |    95000 |    35 | male     | operation |
+|    3 | anne   |   125000 |    34 | female   | analytics |
++------+--------+----------+-------+----------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> yooo that is soo cool
+    -> /c
+    -> \c;
+ERROR:
+No query specified
+
+mysql> select * from employee where e_age between 28 and 40;
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    1 | sam    |    95000 |    35 | male     | operation |
+|    3 | anne   |   125000 |    34 | female   | analytics |
+|    6 | jeff   |   200000 |    28 | male     | operation |
++------+--------+----------+-------+----------+-----------+
+3 rows in set (0.00 sec)
+
+mysql> select * from employee where e_salary between 150000 and 200000;
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    6 | jeff   |   200000 |    28 | male     | operation |
++------+--------+----------+-------+----------+-----------+
+1 row in set (0.00 sec)
+
+mysql> select * from employee where min(e_age);
+ERROR 1111 (HY000): Invalid use of group function
+mysql> select min(e_age) from employee
+    -> ;
++------------+
+| min(e_age) |
++------------+
+|         21 |
++------------+
+1 row in set (0.03 sec)
+
+mysql> select min(e_salary) from employee;
++---------------+
+| min(e_salary) |
++---------------+
+|         80000 |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> select e_salary from employee where e_age is min;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'min' at line 1
+mysql> select e_salary from employee where min(e_age);
+ERROR 1111 (HY000): Invalid use of group function
+mysql> select e_salary from employee where having min(e_age);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'having min(e_age)' at line 1
+mysql> select max(e_age) from employee;
++------------+
+| max(e_age) |
++------------+
+|         35 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select min(e_age), max(e_age) from employee;
++------------+------------+
+| min(e_age) | max(e_age) |
++------------+------------+
+|         21 |         35 |
++------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select e_salary, min(e_age) from employee;
++----------+------------+
+| e_salary | min(e_age) |
++----------+------------+
+|    95000 |         21 |
++----------+------------+
+1 row in set (0.00 sec)
+
+mysql> select e_salary from employee where e_age is min;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'min' at line 1
+mysql> select max(e_age) from employee;
++------------+
+| max(e_age) |
++------------+
+|         35 |
++------------+
+1 row in set (0.02 sec)
+
+mysql> select count(*) from employee where e_gender = 'male';
++----------+
+| count(*) |
++----------+
+|        4 |
++----------+
+1 row in set (0.02 sec)
+
+mysql> select e_name from employee where e_age > 27 and group by e_gender having count(*) > 3;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'group by e_gender having count(*) > 3' at line 1
+mysql> select e_name from employee where e_age >27 and e_gender having count(*) > 3;
+Empty set, 3 warnings (0.00 sec)
+
+mysql> select e_name from employee where e_age >27 and e_gender having count(*) > 2;
+Empty set, 3 warnings (0.00 sec)
+
+mysql> select e_name from employee where e_age >27 and e_gender having count(*) > 1;
+Empty set, 3 warnings (0.00 sec)
+
+mysql> select count(*) from employee where e_gender = 'female';
++----------+
+| count(*) |
++----------+
+|        2 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select sum(e_salary) from employee;
++---------------+
+| sum(e_salary) |
++---------------+
+|        850000 |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> select avg(e_age) from employee;
++------------+
+| avg(e_age) |
++------------+
+|    27.5000 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> --STRING FUNCTIONS;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--STRING FUNCTIONS' at line 1
+
+mysql> select 'hello world';
++-------------+
+| hello world |
++-------------+
+| hello world |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select ltrim('           hello world');
++---------------------------------+
+| ltrim('           hello world') |
++---------------------------------+
+| hello world                     |
++---------------------------------+
+1 row in set (0.72 sec)
+
+mysql> select 'WHO IS YOUR MHHMMM';
++--------------------+
+| WHO IS YOUR MHHMMM |
++--------------------+
+| WHO IS YOUR MHHMMM |
++--------------------+
+1 row in set (0.02 sec)
+
+mysql> select lower('WHO IS YOUR MSDFHO');
++-----------------------------+
+| lower('WHO IS YOUR MSDFHO') |
++-----------------------------+
+| who is your msdfho          |
++-----------------------------+
+1 row in set (0.03 sec)
+
+mysql> select upper('what is the name of the person who invented facebook');
++---------------------------------------------------------------+
+| upper('what is the name of the person who invented facebook') |
++---------------------------------------------------------------+
+| WHAT IS THE NAME OF THE PERSON WHO INVENTED FACEBOOK          |
++---------------------------------------------------------------+
+1 row in set (0.01 sec)
+
+mysql> select reverse('kal ho na ho');
++-------------------------+
+| reverse('kal ho na ho') |
++-------------------------+
+| oh an oh lak            |
++-------------------------+
+1 row in set (0.04 sec)
+
+mysql> select substring('hello mister bunny rabbit how do you do',7, 11);
++------------------------------------------------------------+
+| substring('hello mister bunny rabbit how do you do',7, 11) |
++------------------------------------------------------------+
+| mister bunn                                                |
++------------------------------------------------------------+
+1 row in set (0.03 sec)
+
+mysql> select substring('hello mister bunny rabbit how do you do',7, 12);
++------------------------------------------------------------+
+| substring('hello mister bunny rabbit how do you do',7, 12) |
++------------------------------------------------------------+
+| mister bunny                                               |
++------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from employee order by e_salary;
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    2 | bob    |    80000 |    21 | male     | support   |
+|    1 | sam    |    95000 |    35 | male     | operation |
+|    5 | matt   |   120000 |    24 | male     | sales     |
+|    3 | anne   |   125000 |    34 | female   | analytics |
+|    6 | jeff   |   200000 |    28 | male     | operation |
+|    4 | julia  |   230000 |    23 | female   | analytics |
++------+--------+----------+-------+----------+-----------+
+6 rows in set (0.23 sec)
+
+mysql> select * from employee where max(e_salary);
+ERROR 1111 (HY000): Invalid use of group function
+mysql> select * from employee order by e_salary desc;
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    4 | julia  |   230000 |    23 | female   | analytics |
+|    6 | jeff   |   200000 |    28 | male     | operation |
+|    3 | anne   |   125000 |    34 | female   | analytics |
+|    5 | matt   |   120000 |    24 | male     | sales     |
+|    1 | sam    |    95000 |    35 | male     | operation |
+|    2 | bob    |    80000 |    21 | male     | support   |
++------+--------+----------+-------+----------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> select * from employee group by * having max(e_salary) > 150000;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* having max(e_salary) > 150000' at line 1
+mysql> select e_name, e_age from employee group by e_name, e_age having max(e_salary) > 150000;
++--------+-------+
+| e_name | e_age |
++--------+-------+
+| jeff   |    28 |
+| julia  |    23 |
++--------+-------+
+2 rows in set (0.14 sec)
+
+mysql> select top 3 from employee;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3 from employee' at line 1
+mysql> select top 3 * from employee;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3 * from employee' at line 1
+mysql> select top3 * from employee;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from employee' at line 1
+mysql> select top from employee;
+ERROR 1054 (42S22): Unknown column 'top' in 'field list'
+mysql> select * from employee top 3;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3' at line 1
+mysql> select * from employee;
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    1 | sam    |    95000 |    35 | male     | operation |
+|    2 | bob    |    80000 |    21 | male     | support   |
+|    3 | anne   |   125000 |    34 | female   | analytics |
+|    4 | julia  |   230000 |    23 | female   | analytics |
+|    5 | matt   |   120000 |    24 | male     | sales     |
+|    6 | jeff   |   200000 |    28 | male     | operation |
++------+--------+----------+-------+----------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> select top 3 * from employee;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3 * from employee' at line 1
+mysql> select * from employee limit 3;
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    1 | sam    |    95000 |    35 | male     | operation |
+|    2 | bob    |    80000 |    21 | male     | support   |
+|    3 | anne   |   125000 |    34 | female   | analytics |
++------+--------+----------+-------+----------+-----------+
+3 rows in set (0.01 sec)
+
+mysql> select e_name from employee where e_salary > 150000 group by e_age and e_dept order by e_salary;
++--------+
+| e_name |
++--------+
+| julia  |
++--------+
+1 row in set, 2 warnings (0.05 sec)
+
+mysql> select avg(e_salary), e_gender from employee group by e_gender;
++---------------+----------+
+| avg(e_salary) | e_gender |
++---------------+----------+
+|   177500.0000 | female   |
+|   123750.0000 | male     |
++---------------+----------+
+2 rows in set (0.05 sec)
+
+mysql> select e_id from employee group by e_gender having avg(e_salary) > 130000;
++------+
+| e_id |
++------+
+|    3 |
++------+
+1 row in set (0.01 sec)
+
+mysql> select e_id from employee group by e_id having avg(e_salary) > 130000;
++------+
+| e_id |
++------+
+|    4 |
+|    6 |
++------+
+2 rows in set (0.06 sec)
+
+mysql> select e_id from employee group by e_id having e_salary > 130000;
+ERROR 1054 (42S22): Unknown column 'e_salary' in 'having clause'
+mysql> select e_id from employee where e_salary > 130000 group by e_id;
++------+
+| e_id |
++------+
+|    4 |
+|    6 |
++------+
+2 rows in set (0.03 sec)
+
+mysql> select avg(e_age) from employee;
++------------+
+| avg(e_age) |
++------------+
+|    27.5000 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select avg(e_age), e_dept from employee group by e_dept order by avg(e_age) desc;
++------------+-----------+
+| avg(e_age) | e_dept    |
++------------+-----------+
+|    31.5000 | operation |
+|    28.5000 | analytics |
+|    24.0000 | sales     |
+|    21.0000 | support   |
++------------+-----------+
+4 rows in set (0.02 sec)
+
+mysql> select avg(salary), e_name from employee group by e_gender order by avg(salary) desc;
+ERROR 1054 (42S22): Unknown column 'salary' in 'field list'
+mysql> select avg(e_salary), e_name from employee group by e_gender order by avg(salary) desc;
+ERROR 1054 (42S22): Unknown column 'salary' in 'order clause'
+mysql> select avg(e_salary), e_name from employee group by e_gender order by avg(e_salary) desc;
++---------------+--------+
+| avg(e_salary) | e_name |
++---------------+--------+
+|   177500.0000 | anne   |
+|   123750.0000 | sam    |
++---------------+--------+
+2 rows in set (0.01 sec)
+
+mysql> select avg(e_salary), e_gender from employee group by e_gender order by avg(e_salary) desc;
++---------------+----------+
+| avg(e_salary) | e_gender |
++---------------+----------+
+|   177500.0000 | female   |
+|   123750.0000 | male     |
++---------------+----------+
+2 rows in set (0.00 sec)
+
+mysql>
