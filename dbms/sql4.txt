@@ -1,0 +1,354 @@
+Enter password: ********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 5
+Server version: 5.7.37-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| giraffe            |
+| happy              |
+| mysql              |
+| performance_schema |
++--------------------+
+5 rows in set (0.08 sec)
+
+mysql> use happy
+Database changed
+mysql> select * from employee;
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    1 | sam    |    95000 |    35 | male     | operation |
+|    2 | bob    |    80000 |    21 | male     | support   |
+|    3 | anne   |   125000 |    34 | female   | analytics |
+|    4 | julia  |   230000 |    23 | female   | analytics |
+|    5 | matt   |   120000 |    24 | male     | sales     |
+|    6 | jeff   |   200000 |    28 | male     | operation |
++------+--------+----------+-------+----------+-----------+
+6 rows in set (0.19 sec)
+
+mysql> select avg(e_age), e_dept from employee group by e_dept order by e_age;
++------------+-----------+
+| avg(e_age) | e_dept    |
++------------+-----------+
+|    21.0000 | support   |
+|    24.0000 | sales     |
+|    28.5000 | analytics |
+|    31.5000 | operation |
++------------+-----------+
+4 rows in set (0.01 sec)
+
+mysql> select avg(e_age), e_dept from employee group by e_dept order by e_age desc;
++------------+-----------+
+| avg(e_age) | e_dept    |
++------------+-----------+
+|    31.5000 | operation |
+|    28.5000 | analytics |
+|    24.0000 | sales     |
+|    21.0000 | support   |
++------------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> select e_dept, avg(e_salary) as avg_salary from employee group by e_dept;
++-----------+-------------+
+| e_dept    | avg_salary  |
++-----------+-------------+
+| analytics | 177500.0000 |
+| operation | 147500.0000 |
+| sales     | 120000.0000 |
+| support   |  80000.0000 |
++-----------+-------------+
+4 rows in set (0.03 sec)
+
+mysql> select e_dept, avg(e_salary) as avg_salary from employee group by e_dept having avg(e_salary) > 100000;
++-----------+-------------+
+| e_dept    | avg_salary  |
++-----------+-------------+
+| analytics | 177500.0000 |
+| operation | 147500.0000 |
+| sales     | 120000.0000 |
++-----------+-------------+
+3 rows in set (0.05 sec)
+
+mysql> select e_dept, avg(e_salary) as avg_salary from employee group by e_dept having avg(e_salary) > 150000;
++-----------+-------------+
+| e_dept    | avg_salary  |
++-----------+-------------+
+| analytics | 177500.0000 |
++-----------+-------------+
+1 row in set (0.00 sec)
+
+mysql> update employee set e_age = 40 where e_name = 'sam';
+Query OK, 1 row affected (0.25 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from employee;
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    1 | sam    |    95000 |    40 | male     | operation |
+|    2 | bob    |    80000 |    21 | male     | support   |
+|    3 | anne   |   125000 |    34 | female   | analytics |
+|    4 | julia  |   230000 |    23 | female   | analytics |
+|    5 | matt   |   120000 |    24 | male     | sales     |
+|    6 | jeff   |   200000 |    28 | male     | operation |
++------+--------+----------+-------+----------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> update employee set e_dept = 'tech' where e_gender = 'female';
+Query OK, 2 rows affected (0.05 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from employee;
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    1 | sam    |    95000 |    40 | male     | operation |
+|    2 | bob    |    80000 |    21 | male     | support   |
+|    3 | anne   |   125000 |    34 | female   | tech      |
+|    4 | julia  |   230000 |    23 | female   | tech      |
+|    5 | matt   |   120000 |    24 | male     | sales     |
+|    6 | jeff   |   200000 |    28 | male     | operation |
++------+--------+----------+-------+----------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> update employee set e_salary = 50000;
+Query OK, 6 rows affected (0.03 sec)
+Rows matched: 6  Changed: 6  Warnings: 0
+
+mysql> select * from employee;
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    1 | sam    |    50000 |    40 | male     | operation |
+|    2 | bob    |    50000 |    21 | male     | support   |
+|    3 | anne   |    50000 |    34 | female   | tech      |
+|    4 | julia  |    50000 |    23 | female   | tech      |
+|    5 | matt   |    50000 |    24 | male     | sales     |
+|    6 | jeff   |    50000 |    28 | male     | operation |
++------+--------+----------+-------+----------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> delete from employee where e_age = 34;
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from employee;
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    1 | sam    |    50000 |    40 | male     | operation |
+|    2 | bob    |    50000 |    21 | male     | support   |
+|    4 | julia  |    50000 |    23 | female   | tech      |
+|    5 | matt   |    50000 |    24 | male     | sales     |
+|    6 | jeff   |    50000 |    28 | male     | operation |
++------+--------+----------+-------+----------+-----------+
+5 rows in set (0.00 sec)
+
+mysql> delete from employee where e_name = 'sam';
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from employee;
++------+--------+----------+-------+----------+-----------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept    |
++------+--------+----------+-------+----------+-----------+
+|    2 | bob    |    50000 |    21 | male     | support   |
+|    4 | julia  |    50000 |    23 | female   | tech      |
+|    5 | matt   |    50000 |    24 | male     | sales     |
+|    6 | jeff   |    50000 |    28 | male     | operation |
++------+--------+----------+-------+----------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> truncate table employee;
+Query OK, 0 rows affected (0.38 sec)
+
+mysql> select * from employee;
+Empty set (0.00 sec)
+
+mysql> desc employee;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| e_id     | int(11)     | NO   | PRI | NULL    |       |
+| e_name   | varchar(20) | YES  |     | NULL    |       |
+| e_salary | int(11)     | YES  |     | NULL    |       |
+| e_age    | int(11)     | YES  |     | NULL    |       |
+| e_gender | varchar(20) | YES  |     | NULL    |       |
+| e_dept   | varchar(20) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+6 rows in set (0.08 sec)
+
+mysql> insert into employee values(1, 'sam', 95000, 45, 'male', 'operations');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into employee values(2, 'bob', 80000, 21, 'male', 'support');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into employee values(3, 'anne', 125000, 25, 'female', 'analytics');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into employee values(4, 'julia', 73000, 30, 'female', 'analytics');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into employee values(5, 'matt', 159000, 33, 'male', 'sales');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into employee values(6, 'jeff', 112000, 27, 'male', 'operations');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employee;
++------+--------+----------+-------+----------+------------+
+| e_id | e_name | e_salary | e_age | e_gender | e_dept     |
++------+--------+----------+-------+----------+------------+
+|    1 | sam    |    95000 |    45 | male     | operations |
+|    2 | bob    |    80000 |    21 | male     | support    |
+|    3 | anne   |   125000 |    25 | female   | analytics  |
+|    4 | julia  |    73000 |    30 | female   | analytics  |
+|    5 | matt   |   159000 |    33 | male     | sales      |
+|    6 | jeff   |   112000 |    27 | male     | operations |
++------+--------+----------+-------+----------+------------+
+6 rows in set (0.00 sec)
+
+mysql> create table department;
+ERROR 1113 (42000): A table must have at least 1 column
+mysql> create table department(d_id number(10), d_name varchar(20), d_location (20));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'number(10), d_name varchar(20), d_location (20))' at line 1
+mysql> create table department(d_id number(10), d_name varchar(20), d_location varchar(20));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'number(10), d_name varchar(20), d_location varchar(20))' at line 1
+mysql> create table department(d_id int(10), d_name varchar(20), d_location varchar(20));
+Query OK, 0 rows affected (0.28 sec)
+
+mysql> insert into department values(1, 'content', 'new york');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into department values(2, 'support', 'chicago');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into department values(3, 'analytics', 'new york');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into department values(4, 'sales', 'boston');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into department values(5, 'tech', 'dallas');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into department values(6, 'finance', 'chicago');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from department;
++------+-----------+------------+
+| d_id | d_name    | d_location |
++------+-----------+------------+
+|    1 | content   | new york   |
+|    2 | support   | chicago    |
+|    3 | analytics | new york   |
+|    4 | sales     | boston     |
+|    5 | tech      | dallas     |
+|    6 | finance   | chicago    |
++------+-----------+------------+
+6 rows in set (0.00 sec)
+
+mysql> select employee.e_name, employee.e_dept, department.d_name, department.d_location from employee inner join department;
++--------+------------+-----------+------------+
+| e_name | e_dept     | d_name    | d_location |
++--------+------------+-----------+------------+
+| sam    | operations | content   | new york   |
+| bob    | support    | content   | new york   |
+| anne   | analytics  | content   | new york   |
+| julia  | analytics  | content   | new york   |
+| matt   | sales      | content   | new york   |
+| jeff   | operations | content   | new york   |
+| sam    | operations | support   | chicago    |
+| bob    | support    | support   | chicago    |
+| anne   | analytics  | support   | chicago    |
+| julia  | analytics  | support   | chicago    |
+| matt   | sales      | support   | chicago    |
+| jeff   | operations | support   | chicago    |
+| sam    | operations | analytics | new york   |
+| bob    | support    | analytics | new york   |
+| anne   | analytics  | analytics | new york   |
+| julia  | analytics  | analytics | new york   |
+| matt   | sales      | analytics | new york   |
+| jeff   | operations | analytics | new york   |
+| sam    | operations | sales     | boston     |
+| bob    | support    | sales     | boston     |
+| anne   | analytics  | sales     | boston     |
+| julia  | analytics  | sales     | boston     |
+| matt   | sales      | sales     | boston     |
+| jeff   | operations | sales     | boston     |
+| sam    | operations | tech      | dallas     |
+| bob    | support    | tech      | dallas     |
+| anne   | analytics  | tech      | dallas     |
+| julia  | analytics  | tech      | dallas     |
+| matt   | sales      | tech      | dallas     |
+| jeff   | operations | tech      | dallas     |
+| sam    | operations | finance   | chicago    |
+| bob    | support    | finance   | chicago    |
+| anne   | analytics  | finance   | chicago    |
+| julia  | analytics  | finance   | chicago    |
+| matt   | sales      | finance   | chicago    |
+| jeff   | operations | finance   | chicago    |
++--------+------------+-----------+------------+
+36 rows in set (0.02 sec)
+
+mysql> select employee.e_name, employee.e_dept, department.d_name, department.d_location from employee inner join department on employee.e_dept = department.d_name;
++--------+-----------+-----------+------------+
+| e_name | e_dept    | d_name    | d_location |
++--------+-----------+-----------+------------+
+| bob    | support   | support   | chicago    |
+| anne   | analytics | analytics | new york   |
+| julia  | analytics | analytics | new york   |
+| matt   | sales     | sales     | boston     |
++--------+-----------+-----------+------------+
+4 rows in set (0.02 sec)
+
+mysql> select employee.e_name, employee.e_dept, department.d_name, department.d_location from employee left join on employee.e_dept = department.d_name;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'on employee.e_dept = department.d_name' at line 1
+mysql> select employee.e_name, employee.e_dept, department.d_name, department.d_location from employee left join on department on employee.e_dept = department.d_name;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'on department on employee.e_dept = department.d_name' at line 1
+mysql> select employee.e_name, employee.e_dept, department.d_name, department.d_location from employee left join department on employee.e_dept = department.d_name;
++--------+------------+-----------+------------+
+| e_name | e_dept     | d_name    | d_location |
++--------+------------+-----------+------------+
+| bob    | support    | support   | chicago    |
+| anne   | analytics  | analytics | new york   |
+| julia  | analytics  | analytics | new york   |
+| matt   | sales      | sales     | boston     |
+| sam    | operations | NULL      | NULL       |
+| jeff   | operations | NULL      | NULL       |
++--------+------------+-----------+------------+
+6 rows in set (0.02 sec)
+
+mysql> select e.e_name, e.e_dept, d.d_name, d.d_location from employee e right join department d on e.e_dept = d.d_name;
++--------+-----------+-----------+------------+
+| e_name | e_dept    | d_name    | d_location |
++--------+-----------+-----------+------------+
+| bob    | support   | support   | chicago    |
+| anne   | analytics | analytics | new york   |
+| julia  | analytics | analytics | new york   |
+| matt   | sales     | sales     | boston     |
+| NULL   | NULL      | content   | new york   |
+| NULL   | NULL      | tech      | dallas     |
+| NULL   | NULL      | finance   | chicago    |
++--------+-----------+-----------+------------+
+7 rows in set (0.01 sec)
+
+mysql> select e.e_name, e.e_dept, d.d_name, d.d_location from employee e full join department d on e.e_dept = d.d_name;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'full join department d on e.e_dept = d.d_name' at line 1
+mysql> select e.e_name, e.e_dept, d.d_name, d.d_location from employee e full join department d on e.e_dept = d.d_name;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'full join department d on e.e_dept = d.d_name' at line 1
+mysql> --MYSQL DOES NOT HAVE THE FULL JOIN THING IN IT SO JUST SKIP IT MAN THIS AINT FOR YOU MAN
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--MYSQL DOES NOT HAVE THE FULL JOIN THING IN IT SO JUST SKIP IT MAN THIS AINT FO' at line 1
+mysql>
