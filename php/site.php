@@ -110,6 +110,26 @@
         }
         echo("<br>");
         echo(longdate(time()));
+
+        echo("<br>");
+        //static variable
+        //they can be only initialized with the predetermined values
+        function test()
+        {
+            static $count = 0;
+            echo($count);
+            $count++;
+        }
+        test();
+        echo("<br>");
+        test();
+        echo("<br>");
+        test();
+        echo("<br>");
+        test();
+        echo("<br>");
+        test();
+        echo("<br>");
     ?>
 </body>
 </html>
